@@ -1,0 +1,36 @@
+#room{
+min-height: 100vh;
+}
+
+.App {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+}
+
+.quote-box {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 20vh;
+height: 50vh;
+width: 80vw;
+background: #fafafa;
+}
+
+button {
+height: 40px;
+width: 100px;
+border-radius: 5px;
+background: white;
+border: 1px solid black;
+font-size: 16px;
+}
+
+button:hover {
+background: black;
+color: white;
+}
+
+
