@@ -9,7 +9,7 @@ class App extends Component {
     quotes: {},
     currentQuote: ""
   }
-  
+
   loadQuotes = () =>{
     fetch('http://quotes.stormconsultancy.co.uk/quotes.json')
     .then(response => response.json())    
@@ -19,36 +19,29 @@ class App extends Component {
       })
     })    
   }
-
-  componentDidMount = () =>{
+  
+  //filter this.state.quotes for a random index
+  getRandom = () => {
+    let randNum =  Math.floor(Math.random() * this.state.quotes.length);
+    let randQuote = this.state.quotes[randNum];
+    this.setState({currentQuote: randQuote})
+  }
+  
+  componentDidMount = () => {
     this.loadQuotes()
   }
   
-  // getQuote = () => {
-  //   let quote = this.state.quotes;
-  //   //iterate through this.state.quotes.length
-  //   let length = quote.length;
-  //   //get random num from 0 to length
-  //   let rand = Math.floor(Math.random() * length);
-  //   //get quote of index rand
-  //   let quoteText = quote[rand].quote;
-  //   let quoteAuthor = quote[rand].author
-  // }
+
   
   render() {
+    
     return (
-      
-      <div className="App">
-        {Object.keys(this.state.quotes).map(key => (
-
-          <Quote
-            key={key}
-            index={key}
-            author={this.state.quotes[key].author}
-            quote={this.state.quotes[key].quote}
-          />
-
-        ))}
+      <div>
+        <Quote
+          quote={this.state.currentQuote.quote}
+          author={this.state.currentQuote.author}
+          getRandom={this.getRandom}
+        />
       </div>
     );
   }
