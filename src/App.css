@@ -2,50 +2,31 @@ html {
   height: 100vh;
 }
 
+body, button{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 .App {
   display: flex;
   justify-content: center;
-}
-
-.c1{
-  background: #F79256;
-}
-
-.c2{
-  background: #1B1B3A;
-}
-
-.c3{
-  background: #CC3937;
-}
-
-.c4{
-  background: #068B9D;
-}
-
-.c5{
-  background: #3F0D12;
 }
 
 .quote-box {
   display: flex;
   justify-content: center;
   margin-top: 10%;
-  width: 500px;
+  width: 600px;
   min-height: 260px;
   padding: 20px 20px 20px 50px;
   background: #fafafa;
-  border: 2px solid black;
   border-radius: 5px;
+  color: white;
 }
-
-
  
 .author{
   font-size: 24px;
   font-weight: lighter;
   margin-bottom: 2px;
-  color: rgba(0, 0, 0, 0);
 }
 
 .controls {
@@ -56,12 +37,17 @@ html {
   display: flex;
   align-items: flex-end;
 }
+
 .icon {
   padding-left: 20px;
   padding-bottom: 7px;
   font-size: 20px;
 }
 
+.quote {
+padding-right: 5px;
+opacity: .5;
+}
 
 .icon:hover{
   color: #1dcaff;
@@ -69,26 +55,37 @@ html {
 }
 
 .text {
-  font-size: 23px;
+  font-size: 27px;
   font-weight: normal;
 }
 
 button {
-  height: 40px;
-  width: 100px;
+  height: 50px;
+  width: 120px;
   border-radius: 5px;
-  background: white;
-  border: 1px solid black;
   font-size: 16px;
+  border: 3px solid white;
+  color: white;
 }
 
 button:hover {
-  background: black;
-  color: white;
+  opacity: .6;
+  border: 4px solid white;
+  
 }
 
 button:focus{
   outline: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 

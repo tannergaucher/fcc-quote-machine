@@ -34,20 +34,21 @@ class App extends Component {
   }
 
   randomColor = () => {
-    let colors = ["#F79256", "#1B1B3A", "#CC3937", "#068B9D", "#3F0D12"];
+    let colors = ["#F79256", "#1B1B3A", "#CC3937", "#068B9D", "#3F0D12", "#EDA428", "#00B7A5", "#2176AE", "#265D93", "#754529", "#13304C", "#CC3937", "#3B1F2B", "#870D1D"];
     let rand = Math.floor(Math.random() * colors.length);
-    console.log(colors[rand]);
+    return colors[rand];
   }
-
+  
   render() {
     
     return (
-      <div className="wrapper">
+      <div className="wrapper, noselect">
         <div className="App">
           <Quote
             quote={this.state.currentQuote.quote}
             author={this.state.currentQuote.author}
             randomQuote={this.randomQuote}
+            randomColor={this.randomColor}
           />
         </div>
       </div>
