@@ -1,7 +1,5 @@
 import React from "react";
-import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
 import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
 import faQuoteLeft from '@fortawesome/fontawesome-free-solid/faQuoteLeft';
 
@@ -16,12 +14,15 @@ class Quote extends React.Component {
     return(
       <div className="quote-box" style={style}>
         <div className="content">
-          <p className="text"><FontAwesomeIcon className="quote" icon={faQuoteLeft}/>{this.props.quote}</p>
+          <p className="text">
+            <FontAwesomeIcon className="quote" icon={faQuoteLeft}/>
+            {this.props.quote}
+          </p>
           <div className="attribute">
             <p className="author">{this.props.author}</p>
             <a id="tweet-link" href={`https://twitter.com/intent/tweet?text=${this.props.quote + " - " + this.props.author}`} target="_blank">
               <FontAwesomeIcon className="icon" icon={faTwitter}/>
-              </a>
+            </a>
           </div>
         </div>
         <div className="controls">
