@@ -1,7 +1,7 @@
 {
   "name": "quote-machine",
   "version": "0.1.0",
-  "homepage": "http://myname.github.io/myapp",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

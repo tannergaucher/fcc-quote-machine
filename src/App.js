@@ -11,7 +11,7 @@ class App extends Component {
   }
   
   loadQuotes = () =>{
-      fetch('https://quotes.stormconsultancy.co.uk/quotes.json')
+      fetch('http://quotes.stormconsultancy.co.uk/quotes.json')
       .then(response => response.json())
       //set quotes state    
       .then(data => {
